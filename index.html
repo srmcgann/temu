@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>super basic shim for embeddeing dwitter.net demos</title>
+    <style>
+      body,html{
+        background: #fff;
+        margin: 0;
+        height: 100vh;
+        overflow: hidden;
+        text-align: justify;
+      }
+      #c:focus{
+        outline: none;
+      }
+      canvas{
+        background:#fff;
+        width: 400px;
+        height: 225px;
+        /*position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);*/
+        float: right;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lectus ex, interdum vitae aliquet ac, tincidunt placerat diam. Sed ex eros, scelerisque et maximus a, egestas non orci. Cras iaculis sapien eget mauris euismod tristique non sed risus. Donec volutpat, ex et gravida tempus, nisl lorem consectetur ligula, id porta arcu
+
+    <canvas id="c" style="float: right;"></canvas>
+
+    neque sed tellus. Nulla ac ornare mauris. Integer in dui velit. Pellentesque pellentesque mi a purus lacinia fermentum. Suspendisse potenti.
+
+    Fusce nec ligula tincidunt, convallis enim ac, hendrerit augue. Vestibulum ac enim in diam placerat aliquam a at nulla. Aenean eu ornare sem. Donec enim est, mollis eu ante in, dictum mollis diam. Suspendisse potenti. Nullam et justo est. Curabitur odio ipsum, feugiat in cursus sit amet, tristique a urna.
+
+    Vestibulum mattis vel nunc nec eleifend. Phasellus convallis tortor et lacus sagittis, ac varius justo suscipit. Proin pretium elementum ante, quis efficitur odio venenatis aliquet. Donec nec lorem ipsum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec in mi eget nibh maximus pharetra sit amet eget augue. Sed dapibus, mi quis cursus pretium, tellus risus tincidunt ligula, non scelerisque enim odio in eros.
+    
+    Fusce eu mi dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis euismod blandit nisi, nec vehicula turpis malesuada vitae. Fusce tincidunt tristique sapien, eget gravida dolor. Vivamus at enim ornare, accumsan magna at, ultricies 
+    
+    <canvas id="c2" style="float: left;"></canvas>
+
+    eros. Sed viverra, neque nec consectetur vehicula, enim odio consectetur dui, eget congue leo sem id massa. Mauris hendrerit tortor sit amet neque convallis lobortis. Donec eu rutrum dui, eget iaculis quam. Vestibulum fermentum, lorem eget interdum placerat, tortor urna suscipit sapien, at sodales magna felis vitae arcu. Pellentesque luctus, massa a porttitor malesuada, massa urna aliquet libero, ut consequat eros magna ut eros. Suspendisse sodales mollis tortor sed accumsan. Praesent suscipit tincidunt mauris quis ornare. Aenean vitae scelerisque ex, eu suscipit quam. Curabitur quis dapibus mauris, eu iaculis nunc. Aliquam tincidunt accumsan nunc, condimentum feugiat est elementum eu. Nulla luctus arcu ut est efficitur, in viverra ante accumsan.
+
+    Donec in quam vitae mauris dictum hendrerit. Aliquam erat volutpat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi vulputate ultricies semper. Mauris lacinia sodales elit, eget fringilla sapien scelerisque vel. Maecenas pretium aliquet sagittis. Proin pretium risus non orci fringilla, non accumsan velit elementum. Morbi pellentesque velit eu justo pulvinar porttitor.
+    <script>
+    
+      c = document.querySelector('#c')
+      c.width = 1920
+      c.height = 1080
+      x = c.getContext('2d')
+      C = Math.cos
+      S = Math.sin
+      t = 0
+      T = Math.tan
+
+      Draw = () => {
+
+        /* dweet code here */
+              
+        A=960,B=540,x.fillRect(0,0,D=2e3,D)
+        for(i=D;i--;)x.clearRect(A+1/(Z=2.5+C(p=i*C(t/2)/40)*S(q=i/628))*(X=S(p)*S(q))*A,B+C(q)/Z*A,s=69/Z/Z,s)
+
+        /* end dweet code */
+
+        t+=1/60
+        requestAnimationFrame(Draw)
+      }
+      Draw()
+    
+    
+    
+      /* add a second dweet, change 't' in dweet to 't_', 'x' to 'x_', etc... */
+      
+      c_ = document.querySelector('#c2')
+      c_.width = 1920
+      c_.height = 1080
+      x_ = c_.getContext('2d')
+      t_ = 0
+
+      Draw2 = () => {
+
+        /* dweet code here */
+              
+        for(x_[g='fillRect'](0,0,c_.width=(w=960)*2,i=w*3);i--;x_.fillStyle=`hsl(${.15*i},99%,60%`,x_[g](w+(S(q=i/381+C(t_/2)*3)*Z)/(Z=C(q)*Z-7)*w,540+S(p)*v/Z*w,s=1+200/Z/Z,s))Z=C(p=i/63.67+t_)*(v=i%8/8+1)+3
+        
+        /* end dweet code */
+
+        t_+=1/60
+        requestAnimationFrame(Draw2)
+      }
+      Draw2()
+    
+    </script>
+  </body>
+</html>
